@@ -1,4 +1,4 @@
 $ ->
   $(".click-me").on "click", ->
-    $("body").append "<p>Clicked!</p>"
+    $("<p>Clicked!</p>").insertAfter $(@)
 

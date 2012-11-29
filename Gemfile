@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.9'
 
 gem 'sqlite3'
 
@@ -14,9 +14,16 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'ember-rails'
+
+gem 'thin'
 
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'cucumber-rails', :require => false
+
+  gem 'rb-fsevent'
+  gem 'guard-spork'
+  gem 'guard-cucumber'
 end
