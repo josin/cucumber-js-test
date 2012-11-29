@@ -13,7 +13,7 @@ require 'cucumber/rails'
 Capybara.default_selector = :css
 
 Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome, :resynchronize => true)
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 
 # By default, any exception happening in your Rails application will bubble up
