@@ -14,7 +14,7 @@ App.DataController = Em.Controller.extend
 
 
 App.Router = Em.Router.extend
-  enableLogging: true
+  enableLogging: false
 
   root: Em.Route.extend
     index: Em.Route.extend

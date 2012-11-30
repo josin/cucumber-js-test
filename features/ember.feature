@@ -11,5 +11,5 @@ Feature: Home page with EmberJS app
       Given I go to the home page
        When I press "Get data"
        Then I should see "Sleep time:"
-       Then I should see "Text:"
+        And I should see "Text:"
        Then I should see "Welcome in the world of tomorrow!"

@@ -9,6 +9,10 @@ Spork.prefork do
   # prefer to use XPath just remove this line and adjust any selectors in your
   # steps to use the XPath syntax.
   Capybara.default_selector = :css
+  Capybara.default_wait_time = 10
+
+  # require 'capybara/poltergeist'
+  # Capybara.javascript_driver = :poltergeist
 
   Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app, browser: :chrome)
@@ -17,7 +21,7 @@ Spork.prefork do
   ActionController::Base.allow_rescue = false
 
   begin
-    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.strategy = :truncation
     Cucumber::Rails::Database.javascript_strategy = :truncation
   rescue NameError
     raise "You need to add database_cleaner to your Gemfile (in the :test group) if you wish to use it."

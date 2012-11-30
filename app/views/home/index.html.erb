@@ -1,5 +1,35 @@
 <h1>Hello World!</h1>
 
-<%= button_tag "Click me!", :class => "click-me" %>
+<button type="button" class="btn btn-primary click-me">Click me!</button>
+
+<!-- Button to trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Launch modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" role="modal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3 id="myModalLabel">Enter your email</h3>
+  </div>
+  <div class="modal-body">
+    <form class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">Email</label>
+        <div class="controls">
+          <input type="text" id="inputEmail" placeholder="Email">
+          <span class="help-inline"></span>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+
 
 <div id="app_container"></div>
+
+
+
