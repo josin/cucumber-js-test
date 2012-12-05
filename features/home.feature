@@ -15,5 +15,5 @@ Feature: Home page
      When I go to the home page
       And I press "Launch modal"
      Then I should see "Enter your email"
-     When I fill in "inputEmail" with "my.name@example.com"
+     When I fill in "Email" with "my.name@example.com"
      Then I should see "Email is valid."
