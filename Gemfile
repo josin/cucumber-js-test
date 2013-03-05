@@ -18,9 +18,15 @@ gem 'ember-rails', '0.9.2'
 
 gem 'thin'
 
+group :development do
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'pry-rails'
+end
+
 group :test do
   gem 'capybara'
-  # gem 'poltergeist'
+  gem 'poltergeist'
   gem 'database_cleaner'
   gem 'cucumber-rails', :require => false
 

@@ -6,10 +6,15 @@ module NavigationHelpers
   # step definition in web_steps.rb
   #
   def path_to(page_name)
-    case page_name
 
+    capybara_uri = URI.parse(Capybara.app_host)
+    url_options = { host: capybara_uri.host, port: capybara_uri.port }
+
+    case page_name
     when /^the home\s?page$/
       '/'
+    when /^the subdomain page$/
+      subdomain_home_index_url url_options.merge subdomain: "versative"
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
