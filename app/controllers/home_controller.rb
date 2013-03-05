@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        sleep_time = (2..5).to_a.sample
+        sleep_time = (1..3).to_a.sample
         logger.info { "Will sleep #{sleep_time}" }
         sleep sleep_time
         render json: { text: "Welcome in the world of tomorrow!", sleep_time: sleep_time }

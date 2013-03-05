@@ -53,6 +53,10 @@ When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
 end
 
+When /^(?:|I )click on "([^"]*)"$/ do |text|
+  find(:xpath, "(//a|//button)[normalize-space(text())='#{text}']").click
+end
+
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
 end

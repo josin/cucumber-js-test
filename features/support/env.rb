@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'spork'
 
+ENV["SERVER_PORT"] ||= "8200"
+
 Spork.prefork do
   require 'cucumber/rails'
 
@@ -10,6 +12,8 @@ Spork.prefork do
   # steps to use the XPath syntax.
   Capybara.default_selector = :css
   Capybara.default_wait_time = 10
+  Capybara.server_port = ENV["SERVER_PORT"]
+  Capybara.app_host = "http://lvh.me:#{ENV['SERVER_PORT']}"
 
   # require 'capybara/poltergeist'
   # Capybara.javascript_driver = :poltergeist

@@ -31,7 +31,7 @@ App.ApplicationView = Em.View.extend
     <h2>{{App.title}}</h2>
     <div class="btn-toolbar">
       <button class="btn btn-primary" {{action goTime}}><i class="icon-info-sign icon-white"></i> Get time</button>
-      <button class="btn btn-primary" {{action goJSON}}><i class="icon-refresh icon-white"></i> Get data</button>
+      <a class="btn btn-primary" {{action goJSON}}><i class="icon-refresh icon-white"></i> Get data</a>
     </div>
     {{outlet}}
   """
